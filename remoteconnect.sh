@@ -48,3 +48,7 @@ docker run --name some-guacamole --link some-guacd:guacd \
     -e MYSQL_PASSWORD=${GUAC_ADMIN_PASSWORD} \
     -d -p 8080:8080 guacamole/guacamole
 
+echo "You can now goto:"
+echo "http://`hostname`:8080/guacamole"
+echo "or"
+echo "http://`host ${HOSTNAME} | awk '{print $NF}'`:8080/guacamole"
